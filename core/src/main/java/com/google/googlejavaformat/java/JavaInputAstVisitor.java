@@ -3451,6 +3451,8 @@ public final class JavaInputAstVisitor extends TreePathScanner<Void, Void> {
    * @return whether the local can be declared with horizontal annotations
    */
   private Direction canLocalHaveHorizontalAnnotations(ModifiersTree modifiers) {
+    return Direction.VERTICAL;
+    /*
     int markerAnnotations = 0;
     for (AnnotationTree annotation : modifiers.getAnnotations()) {
       if (annotation.getArguments().isEmpty()) {
@@ -3460,6 +3462,7 @@ public final class JavaInputAstVisitor extends TreePathScanner<Void, Void> {
     return markerAnnotations <= 1 && markerAnnotations == modifiers.getAnnotations().size()
         ? Direction.HORIZONTAL
         : Direction.VERTICAL;
+    */
   }
 
   /**
