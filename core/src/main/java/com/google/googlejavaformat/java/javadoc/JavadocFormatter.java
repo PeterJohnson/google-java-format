@@ -48,7 +48,7 @@ public final class JavadocFormatter {
       return input;
     }
     String result = render(tokens, blockIndent, options);
-    return makeSingleLineIfPossible(blockIndent, result, options);
+    return result; //makeSingleLineIfPossible(blockIndent, result, options);
   }
 
   private static String render(List<Token> input, int blockIndent, JavaFormatterOptions options) {
